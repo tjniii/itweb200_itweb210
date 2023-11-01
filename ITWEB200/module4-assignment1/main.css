@@ -1,0 +1,51 @@
+.container {
+    margin: 0 auto; 
+    max-width: 800px; 
+}
+.flex {
+    display: flex
+}
+.space-between {
+    justify-content: space-between;
+}
+.center {
+    text-align: center;
+}
+.title {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img-portfolio {
+    width: 80px;
+    height: 80px;
+}
+
+.work-section {
+    height: 150px;
+    width: 150px;
+    border: 1px red solid;
+    border-radius: 8px;
+    background-image: url('wireframe_screenshot.png');
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+.date-time {
+    text-align: center;
+    padding: 100px;
+}
+.caculator {
+    text-align: center;
+    padding: 20px;
+
+}
+.change-color{
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    height: 50px;
+    margin: 50px;
+}

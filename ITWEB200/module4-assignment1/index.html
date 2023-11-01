@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="main.css" rel="stylesheet">
+    <script>
+        function displayDateTime() {
+           document.getElementById('display-date-time').innerHTML = new Date()
+        }
+
+        function plus2Numbers() {
+            input1 = parseInt(document.getElementById('input1').value)
+            input2 = parseInt(document.getElementById('input2').value)
+            plus = input1 + input2
+            alert(plus)
+        }
+
+        function changeTitleColor() {
+            document.getElementById('page-title').style.color = 'red';
+
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="container flex space-between">
+            <div><img class="img-portfolio" src="portfolio_image.png" ></div>
+            <div><a href="about.html">About Me</a></div>
+        </div>        
+    </nav>
+    <section class="center">
+        <h1 class="title" id="page-title">Hi! Welcome to my portfolio page</h1>
+    </section>
+    <div class="container flex space-between">
+        <a href="work1.html"><section class="work-section"></section></a>
+        <a href="work2.html"><section class="work-section"></section></a>
+        <a href="work3.html"><section class="work-section"></section></a>
+    </div>
+
+    <div class="date-time"> 
+        <div id="display-date-time">Display Text Here</div>
+        <button id="button-date" onclick="displayDateTime()">Click to display date & time</button>
+    </div>
+
+    <div class="caculator">
+        <section>
+            Input 1: 
+            <input type="text" id="input1" />
+        </section>
+        <section>
+            Input 2: 
+            <input type="text" id="input2" />
+        </section>
+        <button onclick="plus2Numbers()">Add</button>
+    </div>
+
+    <div class="change-color">
+        <button onclick="changeTitleColor()" >Change title color</button>
+    </div>
+
+   
+
+</body>
+</html>

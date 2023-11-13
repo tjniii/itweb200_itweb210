@@ -1,0 +1,39 @@
+.container {
+    margin: 0 auto; 
+}
+
+.flex {
+    display: flex
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.img-car {
+    width: 160px;
+}
+
+section {
+    border: 1px solid gainsboro;
+    padding: 40px;
+    margin: 40px;
+}
+
+p {
+    background-color: aqua;
+    color: blueviolet;
+}
+
+strong {
+    color: brown;
+}
+
+strong:hover {
+    background-color: yellow;
+}
+
+.names {
+    font-family: sans-serif;
+    font-size: larger;
+}

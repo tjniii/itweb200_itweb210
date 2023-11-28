@@ -1,0 +1,27 @@
+container {
+    display: flex;
+    background-color: antiquewhite;
+    color: blueviolet;
+    justify-content: center;
+    flex-direction: column;
+}
+img {
+    width: 80px;
+    height: 160px;
+}
+
+.each-member {
+    margin: 10px;
+    width: 300px;
+}
+
+
+.media-container {
+    display: grid;
+    column-width: 90px;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 20px;
+    border: 2px blue;
+    grid-template-columns: auto auto ;
+}

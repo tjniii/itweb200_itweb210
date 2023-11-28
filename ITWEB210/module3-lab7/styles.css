@@ -1,0 +1,26 @@
+:root {
+   --table-color: forestgreen;
+   --row-bg-color: honeydew;
+   font-family: Calibri, Myriad;
+}
+   
+/* ID selector for game-table */
+#game-table {
+   border: 2px solid var(--table-color);
+   text-align: center;
+   height: 200px;
+   width: 400px;
+ }
+ 
+ /* Descendant selector for <caption> inside <table> */
+ #game-table caption {
+   text-transform: uppercase;
+   background-color: var(--table-color);
+   color: white;
+   padding: 10px;
+ }
+ 
+ /* Pseudo-class selector :nth-child(even) for <tr> */
+ #game-table tr:nth-child(even) {
+   background-color: var(--row-bg-color);
+ }

@@ -1,0 +1,14 @@
+Tools: Chrome + Lighthouse 
+Accessibility reports for module5-assignment1/ourteam.html
+
+1. Image elements do not have [alt] attributes
+2. <html> element does not have a [lang] attribute
+
+
+Accessibility reports for module5-assignment1/contact_1.html
+1. Select elements do not have associated label elements.
+
+
+Accessibility reports for module5-assignment1/contact_2.html
+1. Some elements have a [tabindex] value greater than 0
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Product Rating</title>
+   
+      <style>
+         body {
+            font-family: Calibri, Myriad;
+         }
+   
+         div {
+            margin-bottom: 5px;
+         }
+   
+         /* Element selector for <label> */
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+/* Multiple selector for <input> and <textarea> */
+input, textarea {
+  width: 300px;
+  padding: 10px;
+}
+
+/* Attribute selector for <input> with attribute type="submit" */
+input[type="submit"] {
+  width: auto;
+}
+
+/* Pseudo-element selector ::after for .required class */
+.required::after {
+  content: '*';
+  color: red;
+}
+
+/* Adjacent sibling selector for <input> siblings of <label> */
+label + input {
+  background-color: rgb(219, 241, 248);
+}
+   
+      </style>
+   </head>
+   <body>
+      <h1>Rate a Product</h1>
+      <p><span class="required"></span> indicates required field.</p>
+      <form>
+         <div>
+            <label class="required">Product</label>
+            <input type="text" name="title">
+         </div>
+         <div>
+            <label class="required">Purchase Date</label>
+            <input type="date" name="purchase-date">
+         </div>
+         <div>
+            <label class="required">Rating</label>
+            <input type="number" name="rating" value="4" min="1" max="4">
+         </div> 
+         <div> 
+            <label>Comments</label>      
+            <textarea rows="3" cols="50" name="comments"></textarea> 
+         </div>
+         <input type="submit" value="Submit Rating">
+      </form>
+   </body>
+</html>

@@ -1,0 +1,14 @@
+Tools: Chrome + Lighthouse 
+Accessibility reports for httsp://nytimes.com
+
+1. Image elements do not have [alt] attributes
+2. Heading elements are not in a sequentially-descending order
+
+Accessibility reports for httsp://cnn.com
+1. Image elements do not have [alt] attributes
+2. <frame> or <iframe> elements do not have a title
+3. Links do not have a discernible name
+4. ARIA input fields do not have accessible names
+5. Values assigned to role="" are not valid ARIA roles.
+6. Background and foreground colors do not have a sufficient contrast ratio.
+

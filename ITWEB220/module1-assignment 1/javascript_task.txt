@@ -1,0 +1,14 @@
+1. In your own words, describe a real Web site that uses JavaScript.
+website: https://github.com => login validation, filtering, dropdownmenu 
+
+2. Provide a brief description of what the JavaScript code does for the site.
+website: https://github.com
+   * https://github.com/login 
+      Login screen, users have to type the username and password, Javascript will take those inputs and do some kind validation.
+   * Click the "filter" => display options 
+      Javascript helps filtering the list of events base on Annoucements, Releases, Sponsors, Stars
+      Click "reset to default" => reset all select option to default 
+
+3. Add a final paragraph that shares your level of knowledge of JavaScript.
+Javascript + HTML + CSS => high level of interactive website
+Javascript: function, Data Type (string, number), Variable (const, let, var)

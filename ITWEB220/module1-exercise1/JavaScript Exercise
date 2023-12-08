@@ -1,0 +1,20 @@
+// Prompt the user for their name
+let userName = prompt('Please enter your name: ');
+
+// Prompt the user for a number between 1 and 10 with input validation
+let var1;
+do {
+  var1 = parseInt(prompt('Please enter a number between 1 and 10: '));
+} while (isNaN(var1) || var1 < 1 || var1 > 10);
+
+// Prompt the user for a number between 11 and 20 with input validation
+let var2;
+do {
+  var2 = parseInt(prompt('Please enter a number between 11 and 20: '));
+} while (isNaN(var2) || var2 < 11 || var2 > 20);
+
+// Calculate the result
+let userResult = var1 * var2;
+
+// Display the result using console.log
+console.log('Thank you, ' + userName + '. The result is ' + userResult + '.');

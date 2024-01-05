@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        #output {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="textInput">Enter text:</label>
+    <textarea id="textInput" placeholder="Type here..." oninput="countWords()"></textarea>
+
+    <div id="output">
+        <p>Total Words: <span id="wordCount">0</span></p>
+        <p>Complicated Words (>10 characters): <span id="complicatedWordsCount">0</span></p>
+        <p>Total Sentences: <span id="sentenceCount">0</span></p>
+        <p>Total Characters: <span id="charactersCount">0</span></p>
+    </div>
+
+    <script>
+        function countWords() {
+            let textInput = document.getElementById("textInput").value;
+
+            let totalWords = textInput.split(/\s+/).filter(word => word.length > 0).length;
+            document.getElementById("wordCount").textContent = totalWords;
+
+            let complicatedWords = textInput.split(/\s+/).filter(word => word.length > 10).length;
+            document.getElementById("complicatedWordsCount").textContent = complicatedWords;
+
+            let totalSentences = textInput.split(/[.!?]+/).filter(sentence => sentence.length > 0).length;
+            document.getElementById("sentenceCount").textContent = totalSentences;
+
+            let totalCharacters = textInput.length
+            document.getElementById("charactersCount").textContent = totalCharacters;
+            
+        }
+    </script>
+
+</body>
+</html>
+

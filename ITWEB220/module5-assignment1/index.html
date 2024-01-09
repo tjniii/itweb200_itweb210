@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #passwordForm {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="passwordForm">
+        <h2>Password Checker</h2>
+        <form id="form">
+            <label for="password">New Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            validatePassword();
+        });
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+
+            // Check password criteria
+            if (password.length < 8) {
+                resultDiv.innerHTML = "<p class='error'>Password must be at least 8 characters long.</p>";
+            } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+                resultDiv.innerHTML += "<p class='error'>Password must contain at least one upper case and one lower case letter.</p>";
+            } else if (!/\d/.test(password)) {
+                resultDiv.innerHTML += "<p class='error'>Password must contain at least one number.</p>";
+            } else {
+                resultDiv.innerHTML = "<p>Password is acceptable.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>

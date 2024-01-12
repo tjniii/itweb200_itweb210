@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="header">IT SUPPORT SYSTEM</div>
+    <div class="content">
+        <div class="content-form">
+                <div>Form</div>
+                <div>
+                    <form id="newTicketForm" name="newTicketForm" action="" >
+                        <div>
+                            <label for="ticketNumber">Ticket Number</label><br>
+                            <input type="text" id="ticketNumber" name="ticketNumber">
+                        </div>
+                        <div>
+                            <label for="customerName">Customer's Name</label><br>
+                            <input type="text" id="customerName" name="customerName">
+                        </div>
+                        <div>
+                            <label for="customerEmail">Customer's Email</label><br>
+                            <input type="text" id="customerEmail" name="customerEmail">
+                        </div>
+                        <div>
+                            <label for="problem">Problem</label><br>
+                            <textarea type="text" id="problem" name="problem"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ticket-summary" id="ticketSummary">
+                    
+                </div>
+        </div>
+        <div class="content-list">
+            <div>List</div>
+            <div>
+                <form id="searchForm" name="searchForm" action="" >
+                    <div>
+                        <label for="ticketNumber">Search</label><br>
+                        <input type="text" id="search" name="search">
+                    </div>
+                    
+                    <div>
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div id="list-tickets"></div>
+        </div>
+    </div>
+<script src='script.js'></script>
+</body>
+</html>

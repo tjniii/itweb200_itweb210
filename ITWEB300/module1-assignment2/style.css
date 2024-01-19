@@ -1,0 +1,19 @@
+.header {
+    text-align: center; 
+    font-size: 28px; 
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-form {
+    width: 40%;
+    border-right: 1px solid gainsboro;
+    height: 100%;
+}
+.content-list {
+    width: 100%;
+}

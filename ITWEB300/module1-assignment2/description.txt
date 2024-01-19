@@ -1,0 +1,21 @@
+1. A list of classes with descriptions of each class, the class variables, the class methods with purpose, arguments, return types, and the code used to implement the class.
+
+- Class: Ticket
+- Variables: id, number, customerName, customerEmail, problem
+- Method1: validate() -> boolean
+- Method2: printSummary() -> string
+
+
+- Class TicketList
+- Variable: list
+- Method1: addTicket(ticket) -> void
+- Method2: printTicketList() -> string
+- Method3: seachByTicketNumber(ticketNumber) -> array
+- Method4: setTicketList(ticketList) -> void
+
+
+2. 1-2 paragraph discussion of your experience with the assignment and issues you faced.  
+
+- Using class and objects help me to organize the better, easier to debug and maintance. 
+- The issue I encountered was in the search function where i had to filter the existing list. I wan't sure how to load it from the existing function,
+so i ended up creating a new function seachByTicketNumber() in TicketList to handle the task.

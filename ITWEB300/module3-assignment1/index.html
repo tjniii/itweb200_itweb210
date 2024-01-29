@@ -3,17 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>IT Support Website</title>
+    <style>
+        #loginForm {
+            margin: 0px auto;
+            text-align: center;
+            line-height: 50px;
+            visibility: visible;
+        }
+        #computerForm {
+            visibility: hidden;
+        }
+        #softwareForm {
+            visibility: hidden;
+        }
+        #dropdown {
+            visibility: hidden;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-<!-- Place this element where you want the greeting to appear -->
-<div id="greeting" style="display: none;"></div>
 
-<!-- Place this element to display error messages -->
-<div id="error-message"></div>
+    <div id="hello" style="font-weight: bold; font-size: 18px; text-align: center; visibility: hidden;">
+        Hello, Thomas <br>
 
+        <button onclick="logout()">Logout</button>
+    </div>
+    <div id="error" style="font-weight: bold; font-size: 18px; text-align: center; visibility: hidden;">
+        Wrong username or password
+    </div>
 
-   
+     <form id="loginForm" action="">
+        <div>LOGIN</div>
+        <div>
+            <label>Username:</label>
+            <input type="text" id="username"/>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" id="password" />
+        </div>
+        <button type="submit">Login</button>
+     </form>
+
+     
+
+     <div style="text-align: center; font-size: 16px;">
+
+        <select id="dropdown" onchange="selectTicketType()">
+            <option>---Select---</option>
+            <option value="computer">Computer</option>
+            <option value="software">Software</option>
+        </select>
+
+        <form id="computerForm">
+            <div>Computer</div>
+            <div>
+                <label>Computer Model</label>
+                <input type="text" id="model"/>
+            </div>
+            <div>
+                <label>Computer RAM</label>
+                <input type="text" id="ram"/>
+            </div>
+            <div>
+                <label>Computer CPU</label>
+                <input type="text" id="cpu"/>
+            </div>
+         </form>
+        <form id="softwareForm">
+            <div>Software</div>
+            <div>
+                <label>OS</label>
+                <input type="text" id="os"/>
+            </div>
+            <div>
+                <label>Version</label>
+                <input type="text" id="version"/>
+            </div>
+            <div>
+                <label>Release Date</label>
+                <input type="text" id="release"/>
+            </div>
+         </form>
+     </div>
+
+    
+     <script src="script.js"></script>
+
 </body>
 </html>

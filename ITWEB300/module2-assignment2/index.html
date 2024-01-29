@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body style="margin: 0 auto; width: 500px; text-align: center;">
+    <p id="text" style="margin-top: 50px;">
+        He went shopping with name. name bought a new dress. The The cab arrived late. the inside was in as bad of shape as the outside which was concerning, and it didn't appear that it had been cleaned in months. the green tree air-freshener hanging from the rearview mirror was either exhausted of its scent or not strong enough to overcome the other odors emitting from the cab. The correct decision, in this case, was to get the hell out of it and to call another cab, but she was late and didn't have a choice.
+    </p>
+
+    <div style="margin-top: 50px;" >
+        <div>FindCount()</div><br>
+        <input type="text" id="searchId1" />
+        <button onclick="FindCount('text', 'searchStr')">Find Count</button>
+    </div>
+
+    <div style="margin-top: 50px;" >
+        <div>FindReplace()</div><br>
+        <input type="text" id="findId" placeholder="Find String" /><br><br>
+        <input type="text" id="replacementId" placeholder="Replement String" /><br><br>
+
+        <button onclick="FindReplace('text', 'findId', 'replacementId')">Find Replace</button>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <input type="text" id="replacementId2" placeholder="Replement String" /><br><br>
+
+        <button onclick="ReplaceDouble('text', 'replacementId2')">Replace Double</button>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <button onclick="StartCap('text')">StartCap</button>
+    </div>
+
+
+    <div style="margin-top: 50px;">
+        <input type="text" id="replacementId3" placeholder="Replement Name" /><br><br>
+        <button onclick="FindAndReplaceName('text','replacementId3')">FindAndReplaceName</button>
+    </div>
+<script src='main.js'></script>
+
+</body>
+</html>

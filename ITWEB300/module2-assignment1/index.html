@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ticket Validation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="header" style="text-align: center;">Ticket Validation</div>
+    <div class="content">
+        <div class="content-form" style="text-align: center;">
+                <div>Form</div>
+                <div >
+                    <form id="newTicketForm" name="newTicketForm" action="" >
+                        <div>
+                            <label for="reqDate">Request Date</label><br>
+                            <input type="text" id="reqDate" name="reqDate">
+                        </div>
+                        <div>
+                            <label for="empId">Employee ID</label><br>
+                            <input type="text" id="empId" name="empId">
+                        </div>
+                        <div>
+                            <label for="fName">Customer's First Name</label><br>
+                            <input type="text" id="fName" name="fName">
+                        </div>
+                        <div>
+                            <label for="lName">Customer's Last Name</label><br>
+                            <input type="text" id="lName" name="lName">
+                        </div>
+                        <div>
+                            <label for="probDesc">Problem Description</label><br>
+                            <textarea type="text" id="probDesc" name="probDesc"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ticket-summary" id="ticketSummary">
+                    
+                </div>
+        </div>
+        
+    </div>
+<script src='script.js'></script>
+</body>
+</html>

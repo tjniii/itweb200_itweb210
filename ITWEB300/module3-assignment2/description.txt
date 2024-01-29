@@ -1,0 +1,21 @@
+1. Extra API used:
+DELETE API
+The DELETE method is used to submit a request for deleting record to the API. The delete API need to have an Id to represent the delete
+record.
+
+Using Example:
+ const deletedTicket = await fetch('https://65b81c1046324d531d55f686.mockapi.io/tickets/' + ticketId, {
+        method: 'DELETE',
+    })
+
+
+In this example method: 'DELETE' was used, with ticketId
+
+============================================================================================================
+2. Experience
+
+API 
+APIs are like connectors that help different software programs talk to each other smoothly. Especially between frontend - backend and database.
+
+
+

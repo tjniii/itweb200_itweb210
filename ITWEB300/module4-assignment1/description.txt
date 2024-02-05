@@ -1,0 +1,1 @@
+Using jQuery helps eliminate redundant code, making the code cleaner and easier to read. Although jQuery requires you to load it from another source, it is worth considering the pros over the cons.

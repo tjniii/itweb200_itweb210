@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IT Support System</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"   integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="   crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="header">IT SUPPORT SYSTEM</div>
+    <div class="content">
+        <div class="content-form">
+                <div>Form</div>
+                <div>
+                    <form id="newTicketForm" name="newTicketForm" action="" >
+                        <div>
+                            <label for="reqDate">Request Date</label><br>
+                            <input type="text" id="reqDate" name="reqDate">
+                        </div>
+                        <div>
+                            <label for="empID">Employee ID</label><br>
+                            <input type="text" id="empID" name="empID">
+                        </div>
+                        <div>
+                            <label for="fName">Customer's First Name</label><br>
+                            <input type="text" id="fName" name="fName">
+                        </div>
+                        <div>
+                            <label for="lName">Customer's Last Name</label><br>
+                            <input type="text" id="lName" name="lName">
+                        </div>
+                        <div>
+                            <label for="problem">Problem Description</label><br>
+                            <textarea type="text" id="problem" name="problem"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="btnSubmit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ticket-summary" id="ticketSummary">
+                    
+                </div>
+        </div>
+        <div class="content-list">
+            <div>List</div>
+            <div>
+                <form id="searchForm" name="searchForm" action="" >
+                    <div>
+                        <label for="ticketNumber">Search</label><br>
+                        <input type="text" id="search" name="search">
+                    </div>
+                    
+                    <div>
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div id="list-tickets"></div>
+        </div>
+    </div>
+<script src='script.js'></script>
+</body>
+</html>

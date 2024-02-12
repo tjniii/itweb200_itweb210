@@ -1,0 +1,1 @@
+I leanred how to use mouseover trigger in jQuery, and it seems easier than using pure Javascript and achieve the exact same result.

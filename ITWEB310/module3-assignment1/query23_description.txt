@@ -1,0 +1,54 @@
+1. Query:
+   Updating name of the student
+
+   // Before query: 
+
+   // Inserting data =
+    db.students.insertMany([
+                                { id: 1, name: 'Ryan', gender: 'M' },
+                                { id: 2, name: 'Joanna', gender: 'F' }
+                            ]);
+
+
+    // Filtering data
+    db.students.find({ gender: 'M' });
+
+    // Result of before query:
+    mycompiler_mongodb> [
+            {
+                _id: ObjectId('65e648458ea1088da6d923fb'),
+                id: 1,
+                name: 'Ryan',
+                gender: 'M'
+            }
+    ]
+
+
+    // Updating query
+    db.students.update({ name: "Ryan" },
+                        {
+                            "$set": {
+                                "name": "Andy",
+                            }
+                        })
+
+    
+
+    // Query to see the updated result
+
+    db.students.find({ gender: 'M' });
+
+    // Result after updating data
+
+    mycompiler_mongodb> [
+            {
+                _id: ObjectId('65e649d347c57efc3ad541b5'),
+                id: 1,
+                name: 'Andy',
+                gender: 'M'
+            }
+    ]
+
+Description:
+The student's name was "Ryan" now changed to "Andy" with the same ObjectId which is: '65e649d347c57efc3ad541b5
+

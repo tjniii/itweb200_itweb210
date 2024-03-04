@@ -1,0 +1,39 @@
+* Description: Inserting 2 student with gender and name into the MongoDB, and we searching the student that have gender is M.
+* Query:
+
+    // Query 1
+    // Initiate database by inserting data
+    db.students.insertMany([
+                                { id: 1, name: 'Ryan', gender: 'M' },
+                                { id: 2, name: 'Joanna', gender: 'F' }
+                            ]);
+
+
+    // Query 2
+    // Filtering data by gender
+    db.students.find({ gender: 'M' });
+
+
+
+* Result: 
+
+    // Query 1
+    mycompiler_mongodb> ... ... ... {
+        acknowledged: true,
+        insertedIds: {
+            '0': ObjectId('65e643647b000b0420dca9e6'),
+            '1': ObjectId('65e643647b000b0420dca9e7')
+        }
+    }
+
+    // Query 2
+    mycompiler_mongodb> [
+        {
+            _id: ObjectId('65e643647b000b0420dca9e6'),
+            id: 1,
+            name: 'Ryan',
+            gender: 'M'
+        }
+    ]
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ITSupport>
+    <Ticket>
+		<RequestDate>2024-12-12</RequestDate>
+		<EmployeeID>123</EmployeeID>
+		<UserFirstName>Helen</UserFirstName>
+		<UserLastName>Smith</UserLastName>
+		<ProblemDescription>My computer is broken</ProblemDescription>
+		<Status>New</Status>
+		<Response>Have not resolved yet</Response>
+	</Ticket>
+	<Ticket>
+		<RequestDate>2024-12-12</RequestDate>
+		<EmployeeID>432</EmployeeID>
+		<UserFirstName>Allen</UserFirstName>
+		<UserLastName>Lee</UserLastName>
+		<ProblemDescription>My phone is broken</ProblemDescription>
+		<Status>Resovled</Status>
+		<Response>All Done</Response>
+	</Ticket>
+	<Ticket>
+		<RequestDate>2024-03-10</RequestDate>
+		<EmployeeID>123</EmployeeID>
+		<UserFirstName>Helen</UserFirstName>
+		<UserLastName>Smith</UserLastName>
+		<ProblemDescription>My tablet is broken</ProblemDescription>
+		<Status>New</Status>
+		<Response>Have not resolved yet</Response>
+	</Ticket>
+	<Ticket>
+		<RequestDate>2024-08-03</RequestDate>
+		<EmployeeID>098</EmployeeID>
+		<UserFirstName>Mike</UserFirstName>
+		<UserLastName>White</UserLastName>
+		<ProblemDescription>The internet is really slow. Help Please</ProblemDescription>
+		<Status>New</Status>
+		<Response>Have not resolved yet</Response>
+	</Ticket>
+</ITSupport>
+			

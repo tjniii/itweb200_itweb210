@@ -1,0 +1,7 @@
+In this project, I utilized Node.js and Express to develop the backend that 
+communicates with the frontend. I encountered issues with CORS and resolved 
+them by installing the cors library in Node.js.
+
+Regarding the frontend, I faced challenges with refreshing data after deletion 
+or editing. To address this, I implemented a function to call the API and retrieve 
+the updated list of items every time a deletion or edit operation occurs.

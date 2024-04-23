@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Message System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+      }
+      .new-messsage-wrapper {
+        text-align: center;
+      }
+      textarea {
+        width: 400px;
+      }
+
+      .sendBtn {
+        margin-left: 10px;
+        height: 30px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Message Board</h2>
+
+    <div id="message-board"></div>
+
+    <div id="message-list"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        function fetchMessages() {
+          fetch("http://localhost:3000", { method: "GET" })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((messages) => {
+              renderMessages(messages);
+            })
+            .catch((error) => {
+              console.error("There was a problem fetching messages:", error);
+            });
+        }
+
+        function renderMessages(messages) {
+          const messageListDiv = document.getElementById("message-list");
+          messageListDiv.innerHTML = "";
+
+          messages.forEach((message) => {
+            const messageDiv = document.createElement("div");
+            messageDiv.textContent = message.message;
+
+            const editButton = document.createElement("button");
+            editButton.textContent = "Edit";
+            editButton.addEventListener("click", () => {
+              editMessage(message._id, message.message);
+            });
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", () =>
+              deleteMessage(message._id)
+            );
+
+            messageDiv.appendChild(editButton);
+            messageDiv.appendChild(deleteButton);
+            messageListDiv.appendChild(messageDiv);
+          });
+        }
+
+        function sendMessage() {
+          const message = document.querySelector(".new-message-textarea").value;
+          fetch("http://localhost:3000", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message: message.toString() }),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Message sent successfully:", data);
+              fetchMessages(); // Fetch messages again after sending a new message
+            })
+            .catch((error) => {
+              console.error("There was a problem sending the message:", error);
+            });
+        }
+
+        function deleteMessage(messageId) {
+          fetch("http://localhost:3000/messages/" + messageId, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Message deleted successfully:", data);
+              fetchMessages(); // Fetch messages again after deleting a message
+            })
+            .catch((error) => {
+              console.error("There was a problem deleting the message:", error);
+            });
+        }
+
+        function editMessage(messageId, currentMessage) {
+          const updatedMessage = prompt("Edit message:", currentMessage);
+          if (updatedMessage !== null) {
+            fetch(`http://localhost:3000/messages/${messageId}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ message: updatedMessage }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json();
+              })
+              .then((data) => {
+                console.log("Message updated successfully:", data);
+                fetchMessages(); // Fetch messages again after updating a message
+              })
+              .catch((error) => {
+                console.error(
+                  "There was a problem updating the message:",
+                  error
+                );
+              });
+          }
+        }
+
+        fetchMessages();
+
+        return (
+          <div className="new-messsage-wrapper">
+            <textarea
+              className="new-message-textarea"
+              cols="5"
+              placeholder="Type your message here..."
+            ></textarea>
+            <button className="sendBtn" onClick={sendMessage}>
+              Send
+            </button>
+          </div>
+        );
+      }
+
+      const container = document.getElementById("message-board");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />);
+    </script>
+  </body>
+</html>

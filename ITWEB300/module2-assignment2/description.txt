@@ -1,1 +1,1 @@
-Its hard. There are alot of try and error in order to get it working correctly with regular expression. 
+Its hard. Theres a lot of trial and error in order to get it working correctly with regular expression. 

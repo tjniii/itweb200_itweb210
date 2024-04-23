@@ -1,0 +1,12 @@
+1. Creat a new account on mongodb.com
+2. Generate the connection string
+3. Create new local project call: hello-mongo
+4. Install mongoose and express package to work on API and mongodb
+5. Initiate index.jst
+   5.1. Connect to mongodb using connection string from step 2
+   5.2. If Connection has been established => success. Otherwise error will be printed out
+
+==========
+Screenshot included:
+1. MongoDB collections
+2. Local hello-mongo project setup
